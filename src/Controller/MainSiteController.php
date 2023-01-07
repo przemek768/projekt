@@ -10,6 +10,6 @@ class MainSiteController extends AbstractController
     #[Route('/', name: 'app_main_site')]
     public function index()
     {
-        return $this->render('main_site/index.html.twig');
+        return $this->render('mainsite.php.twig');
     }
 }
