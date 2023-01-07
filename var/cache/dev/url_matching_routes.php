@@ -8,7 +8,7 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
-        '/main/site' => [[['_route' => 'app_main_site', '_controller' => 'App\\Controller\\MainSiteController::index'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'app_main_site', '_controller' => 'App\\Controller\\MainSiteController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
