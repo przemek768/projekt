@@ -5,5 +5,5 @@
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
     'app_main_site' => [[], ['_controller' => 'App\\Controller\\MainSiteController::index'], [], [['text', '/']], [], [], []],
-    'app_register' => [[], ['_controller' => 'App\\Controller\\RegisterController::index'], [], [['text', '/register']], [], [], []],
+    'app_register' => [[], ['_controller' => 'App\\Controller\\RegisterController::show'], [], [['text', '/register']], [], [], []],
 ];
