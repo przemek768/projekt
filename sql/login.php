@@ -1,8 +1,6 @@
 <?php
 include ('../DataBaseConnection.php');
 
-session_start();
-
 if(isset($_SESSION['user']) && !empty($_SESSION['user'])) {
     header('Location: ../client_panel.php');
     exit;
@@ -16,6 +14,7 @@ $result = $pdo->query($sql);
 if($result){
     $user = $result->fetch();
     if($user){
+        session_start();
         $_SESSION['user'] = true;
         $_SESSION['user_id'] = $user['user_id'];
         header('Location: ../client_panel.php');

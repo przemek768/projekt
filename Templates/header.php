@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php include('DataBaseConnection.php');
+session_start();
 if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
     $user_id = $_SESSION['user_id'];
 };
@@ -28,6 +29,7 @@ $username = $pdo->query("SELECT user_name FROM users WHERE user_id = '$user_id'"
         <div
             class="collapse navbar-collapse" id="navbarNav">
             <ul class="nav navbar-nav ml-auto">
+                <?php var_dump($user_id); ?>
                 <li class="nav-item" role="presentation"><a class="nav-link active" href="panel_kupujacy.html">Panel kupującego</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="panel_sprzedajacy.html">Panel sprzedającego</a></li>
                 <?php if($user_id){
