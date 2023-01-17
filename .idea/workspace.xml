@@ -2,55 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec3e650e-6c5e-4064-8f42-fd2e5cf876be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DataBaseConnection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/.idea/projects.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/404.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/archive.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/css/Article-List.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/css/Login-Form-Clean.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/css/NavBar-Notifications-Panel-1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/css/NavBar-Notifications-Panel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/fonts/ionicons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/fonts/ionicons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/fonts/ionicons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/fonts/ionicons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/fonts/ionicons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/Black Monoline Real Estate Logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/avatars/avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/building.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/desk.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/loft.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/nature/image1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/nature/image2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/nature/image3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/nature/image4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/nature/image5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/nature/image6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/tech/image4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/img/tech/image6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/assets/js/theme.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/footer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/front-page.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/functions.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/header.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/page.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/search.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/single.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/sql/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +73,7 @@
       <workItem from="1673886339714" duration="3312000" />
       <workItem from="1673890096705" duration="1117000" />
       <workItem from="1673891482099" duration="1677000" />
-      <workItem from="1673976414721" duration="877000" />
+      <workItem from="1673976414721" duration="1284000" />
     </task>
     <servers />
   </component>
