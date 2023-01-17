@@ -6,6 +6,8 @@ if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
     $user_id = $_SESSION['user_id'];
 };
 $username = $pdo->query("SELECT user_name FROM users WHERE user_id = '$user_id'");
+$username = $username->fetch();
+$username = $username['user_name'];
 
 ?>
 <head>
