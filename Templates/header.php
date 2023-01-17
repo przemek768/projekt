@@ -31,7 +31,6 @@ $username = $username['user_name'];
         <div
             class="collapse navbar-collapse" id="navbarNav">
             <ul class="nav navbar-nav ml-auto">
-                <?php var_dump($user_id); ?>
                 <li class="nav-item" role="presentation"><a class="nav-link active" href="panel_kupujacy.html">Panel kupującego</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="panel_sprzedajacy.html">Panel sprzedającego</a></li>
                 <?php if($user_id){
