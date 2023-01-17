@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
-<?php include('../DataBaseConnection.php') ?>
+<?php include('DataBaseConnection.php')
+$check = if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+    $user_id = $_SESSION['user_id'];
+};
+$username = $pdo->query("SELECT user_name FROM users WHERE user_id = '$user_id'");
+
+?>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -24,7 +30,12 @@
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item" role="presentation"><a class="nav-link active" href="panel_kupujacy.html">Panel kupującego</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="panel_sprzedajacy.html">Panel sprzedającego</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="hire-me.html">Cześć, {imie}</a></li>
+                <?php if($check){
+                    echo '<li class="nav-item" role="presentation"><a class="nav-link" href="/client_panel.php">Cześć, '. $username .'</a></li>';
+                }else{
+                    echo '<li class="nav-item" role="presentation"><a class="nav-link" href="/login.php">Zaloguj</a></li>';
+                }
+                    ?>
             </ul>
         </div>
     </div>
