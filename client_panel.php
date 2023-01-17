@@ -1,4 +1,4 @@
-<?php include ('Templates/header.php') ?>
+<?php include ('Templates/header.php'); ?>
 <main class="page projects-page">
     <section class="portfolio-block projects-cards">
         <div class="container">
@@ -89,4 +89,4 @@
         </div>
     </section>
 </main>
-<?php include 'Templates/footer.php'; ?>
+<?php include ('Templates/footer.php'); ?>
