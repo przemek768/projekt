@@ -4,7 +4,6 @@
     <list default="true" id="ec3e650e-6c5e-4064-8f42-fd2e5cf876be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client_panel.php" beforeDir="false" afterPath="$PROJECT_DIR$/client_panel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/wymagania.php" beforeDir="false" afterPath="$PROJECT_DIR$/sql/wymagania.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,7 @@
       <workItem from="1673891482099" duration="1677000" />
       <workItem from="1673976414721" duration="5617000" />
       <workItem from="1674032446481" duration="446000" />
-      <workItem from="1674158898102" duration="1855000" />
+      <workItem from="1674158898102" duration="2368000" />
     </task>
     <servers />
   </component>

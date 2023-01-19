@@ -2,12 +2,12 @@
 <?php include ('DataBaseConnection.php'); ?>
 <?php
 $user_id = $_SESSION['user_id'];
-$wymagania = $pdo->query('SELECT * FROM wymagania WHERE user_id = '.$user_id);
+$wymagania = $pdo->query("SELECT * FROM wymagania WHERE user_id = '$user_id'");
 $wymagania = $wymagania->fetchAll();
 foreach ($wymagania as $wy){
     $wymagania_id = $wy->id_wymagania;
 }
-$wymagania_specjalne = $pdo->query('SELECT * FROM wymagania_specjalne WHERE id_wymagania = '.$wymagania_id);
+$wymagania_specjalne = $pdo->query("SELECT * FROM wymagania_specjalne WHERE id_wymagania = '$wymagania_id'");
 $wymagania_specjalne = $wymagania_specjalne->fetchAll();
 ?>
 <main class="page projects-page">
