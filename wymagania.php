@@ -13,8 +13,8 @@
                     </select>
                 </div>
                 <div class="form-group"><label>Lokalizacja</label><input name="lokalizacja" class="form-control" type="text"></div>
-                <div class="form-group"><label for="email">Minimalny rozmiar (m²)<br></label><input name="min_rozmiar" class="form-control" type="number" name="size" value="20" placeholder="20" min="5" max="5000" step="1"></div>
-                <div class="form-group"><label for="email">Liczba pokoi (minimum)<br></label><input name="liczba_pokoi" class="form-control" type="number" name="rooms" value="3" placeholder="3" min="5" max="5000" step="1"></div>
+                <div class="form-group"><label for="email">Minimalny rozmiar (m²)<br></label><input name="min_rozmiar" class="form-control" type="number" value="20" placeholder="20" min="5" max="5000" step="1"></div>
+                <div class="form-group"><label for="email">Liczba pokoi (minimum)<br></label><input name="liczba_pokoi" class="form-control" type="number" value="3" placeholder="3" min="5" max="5000" step="1"></div>
                 <div class="form-group"><label for="email">Maksymalna cena (PLN)<br></label><input name="max_cena" class="form-control" type="number" min="0" max="9999999" step="100"></div><label for="email">Wymagania specjalne<br></label>
                 <div class="form-row">
                     <div class="col">
