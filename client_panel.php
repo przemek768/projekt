@@ -48,15 +48,12 @@ $wymagania_specjalne = $wymagania_specjalne->fetchAll();
                             <h6><a href="#">OBECNE WYMAGANIA</a></h6>
                             <ul>
                                 <?php
-                                foreach ($wymagania as $w){
                                     echo '<li> '. $w['rodzaj_nieruchomosci'] .' '. $w['lokalizacja'] .' '. $w['min_rozmiar'] .' '. $w['liczba_pokoi'] .' '. $w['max_cena' ].'
-                                    <div class="btn-group" role="group" style="font-size: 8px;"><button class="btn btn-primary" type="button" style="font-size: 8px;">Edytuj</button><button class="btn btn-primary" type="button" style="font-size: 8px;">Usuń</button></div>
+                                   
                                 </li>';
-                                }
                                 foreach ($wymagania_specjalne as $ws){
                                     if($ws['status_wymagania'] == 1){
                                         echo '<li> '. $ws['nazwa_wymagania'] .'
-                                    <div class="btn-group" role="group" style="font-size: 8px;"><button class="btn btn-primary" type="button" style="font-size: 8px;">Edytuj</button><button class="btn btn-primary" type="button" style="font-size: 8px;">Usuń</button></div>
                                     </li>';
                                     }
                                 }
