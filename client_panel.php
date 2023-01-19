@@ -54,7 +54,7 @@ $wymagania_specjalne = $wymagania_specjalne->fetchAll();
                                 </li>';
                                 }
                                 foreach ($wymagania_specjalne as $ws){
-                                    if($ws->status_wymagania){
+                                    if($ws['status_wymagania'] == 1){
                                         echo '<li> '. $w['nazwa_wymagania'] .'
                                     <div class="btn-group" role="group" style="font-size: 8px;"><button class="btn btn-primary" type="button" style="font-size: 8px;">Edytuj</button><button class="btn btn-primary" type="button" style="font-size: 8px;">Usuń</button></div>
                                     </li>';
