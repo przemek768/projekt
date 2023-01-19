@@ -1,6 +1,6 @@
 <?php
 include ('../DataBaseConnection.php');
-
+$user_id = $_SESSION['user_id'];
 $rodzaj_nieruchomosci = $_POST['rodzaj_nieruchomosci'];
 $lokalizacja = $_POST['lokalizacja'];
 $min_rozmiar = $_POST['min_rozmiar'];

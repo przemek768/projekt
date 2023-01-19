@@ -1,4 +1,15 @@
 <?php include ('Templates/header.php'); ?>
+<?php include ('DataBaseConnection.php'); ?>
+<?php
+$user_id = $_SESSION['user_id'];
+$wymagania = $pdo->query('SELECT * FROM wymagania WHERE user_id = '.$user_id);
+$wymagania = $wymagania->fetchAll();
+foreach ($wymagania as $wy){
+    $wymagania_id = $wy->id_wymagania;
+}
+$wymagania_specjalne = $pdo->query('SELECT * FROM wymagania_specjalne WHERE id_wymagania = '.$wymagania_id);
+$wymagania_specjalne = $wymagania_specjalne->fetchAll();
+?>
 <main class="page projects-page">
     <section class="portfolio-block projects-cards">
         <div class="container">
@@ -36,18 +47,22 @@
                         <div class="card-body">
                             <h6><a href="#">OBECNE WYMAGANIA</a></h6>
                             <ul>
-                                <li>Mieszkanie Olsztyn, nr 335
+                                <?php
+                                foreach ($wymagania as $w){
+                                    echo '<li> '. $w->rodzaj_nieruchomosci .' '. $w->lokalizacja .' '. $w->min_rozmiar .' '. $w->liczba_pokoi .' '. $w->max_cena .'
                                     <div class="btn-group" role="group" style="font-size: 8px;"><button class="btn btn-primary" type="button" style="font-size: 8px;">Edytuj</button><button class="btn btn-primary" type="button" style="font-size: 8px;">Usuń</button></div>
-                                </li>
-                                <li>Mieszkanie Poznań, nr 338
+                                </li>';
+                                }
+                                foreach ($wymagania_specjalne as $ws){
+                                    if($ws->status_wymagania){
+                                        echo '<li> '. $w->nazwa_wymagania .'
                                     <div class="btn-group" role="group" style="font-size: 8px;"><button class="btn btn-primary" type="button" style="font-size: 8px;">Edytuj</button><button class="btn btn-primary" type="button" style="font-size: 8px;">Usuń</button></div>
-                                </li>
-                                <li>Dom Olsztyn, nr 354<br>
-                                    <div class="btn-group" role="group" style="font-size: 8px;"><button class="btn btn-primary" type="button" style="font-size: 8px;">Edytuj</button><button class="btn btn-primary" type="button" style="font-size: 8px;">Usuń</button></div>
-                                </li>
-                                <li>Mieszkanie Gdańsk, nr 372
-                                    <div class="btn-group" role="group" style="font-size: 8px;"><button class="btn btn-primary" type="button" style="font-size: 8px;">Edytuj</button><button class="btn btn-primary" type="button" style="font-size: 8px;">Usuń</button></div>
-                                </li>
+                                    </li>';
+                                    }
+                                }
+
+                                ?>
+                                
                             </ul>
                             <nav>
                                 <ul class="pagination">
