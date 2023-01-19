@@ -22,7 +22,13 @@ $wymagania_specjalne = $wymagania_specjalne->fetchAll();
                         <div class="card-body">
                             <h6><a href="#">DODAJ WYMAGANIA</a></h6>
                             <p class="text-muted card-text">Zakładka dodawania wymagań</p>
-                            <a class="btn btn-primary" href="/wymagania.php">Dodaj</a>
+                            <?php
+                            if($wymagania){
+                                echo '<a class="btn btn-primary" href="/wymagania.php">Edytuj</a>';
+                            }else{
+                                echo '<a class="btn btn-primary" href="/wymagania.php">Dodaj</a>';
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -48,17 +54,20 @@ $wymagania_specjalne = $wymagania_specjalne->fetchAll();
                             <h6><a href="#">OBECNE WYMAGANIA</a></h6>
                             <ul>
                                 <?php
-                                foreach ($wymagania as $w){
-                                    echo '<li> '. $w['rodzaj_nieruchomosci'] .' '. $w['lokalizacja'] .' '. $w['min_rozmiar'] .' '. $w['liczba_pokoi'] .' '. $w['max_cena' ].'
+                                if($wymagania){
+                                    foreach ($wymagania as $w){
+                                        echo '<li> '. $w['rodzaj_nieruchomosci'] .' '. $w['lokalizacja'] .' '. $w['min_rozmiar'] .' '. $w['liczba_pokoi'] .' '. $w['max_cena' ].'
                                 </li>';
-                                }
-                                foreach ($wymagania_specjalne as $ws){
-                                    if($ws['status_wymagania'] == 1){
-                                        echo '<li> '. $ws['nazwa_wymagania'] .'
-                                    </li>';
                                     }
+                                    foreach ($wymagania_specjalne as $ws){
+                                        if($ws['status_wymagania'] == 1){
+                                            echo '<li> '. $ws['nazwa_wymagania'] .'
+                                    </li>';
+                                        }
+                                    }
+                                }else{
+                                    echo '<li>Brak wymagań</li>';
                                 }
-
                                 ?>
                                 
                             </ul>
