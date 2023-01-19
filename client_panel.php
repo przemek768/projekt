@@ -11,6 +11,7 @@
                         <div class="card-body">
                             <h6><a href="#">DODAJ WYMAGANIA</a></h6>
                             <p class="text-muted card-text">Zakładka dodawania wymagań</p>
+                            <a class="btn btn-primary" href="/wymagania.php"></a>
                         </div>
                     </div>
                 </div>
