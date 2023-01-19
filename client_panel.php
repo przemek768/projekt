@@ -48,9 +48,10 @@ $wymagania_specjalne = $wymagania_specjalne->fetchAll();
                             <h6><a href="#">OBECNE WYMAGANIA</a></h6>
                             <ul>
                                 <?php
-                                    echo '<li> '. $w['rodzaj_nieruchomosci'] .' '. $w['lokalizacja'] .' '. $w['min_rozmiar'] .' '. $w['liczba_pokoi'] .' '. $w['max_cena' ].'
-                                   
+                                foreach ($wymagania as $w){
+                                    echo '<li> '. $w .'
                                 </li>';
+                                }
                                 foreach ($wymagania_specjalne as $ws){
                                     if($ws['status_wymagania'] == 1){
                                         echo '<li> '. $ws['nazwa_wymagania'] .'
