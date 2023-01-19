@@ -49,7 +49,7 @@ $wymagania_specjalne = $wymagania_specjalne->fetchAll();
                             <ul>
                                 <?php
                                 foreach ($wymagania as $w){
-                                    echo '<li> '; echo $w; echo'
+                                    echo '<li> '. $w['rodzaj_nieruchomosci'] .' '. $w['lokalizacja'] .' '. $w['min_rozmiar'] .' '. $w['liczba_pokoi'] .' '. $w['max_cena' ].'
                                 </li>';
                                 }
                                 foreach ($wymagania_specjalne as $ws){
