@@ -49,7 +49,7 @@ $wymagania_specjalne = $wymagania_specjalne->fetchAll();
                             <ul>
                                 <?php
                                 foreach ($wymagania as $w){
-                                    echo '<li> '. $w .'
+                                    echo '<li> '; echo $w; echo'
                                 </li>';
                                 }
                                 foreach ($wymagania_specjalne as $ws){
