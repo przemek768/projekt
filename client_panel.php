@@ -5,7 +5,7 @@ $user_id = $_SESSION['user_id'];
 $wymagania = $pdo->query("SELECT * FROM wymagania WHERE user_id = '$user_id'");
 $wymagania = $wymagania->fetchAll();
 foreach ($wymagania as $wy){
-    $wymagania_id = $wy->id_wymagania;
+    $wymagania_id = $wy['id_wymagania'];
 }
 $wymagania_specjalne = $pdo->query("SELECT * FROM wymagania_specjalne WHERE id_wymagania = '$wymagania_id'");
 $wymagania_specjalne = $wymagania_specjalne->fetchAll();
@@ -49,13 +49,13 @@ $wymagania_specjalne = $wymagania_specjalne->fetchAll();
                             <ul>
                                 <?php
                                 foreach ($wymagania as $w){
-                                    echo '<li> '. $w->rodzaj_nieruchomosci .' '. $w->lokalizacja .' '. $w->min_rozmiar .' '. $w->liczba_pokoi .' '. $w->max_cena .'
+                                    echo '<li> '. $w['rodzaj_nieruchomosci'] .' '. $w['lokalizacja'] .' '. $w['min_rozmiar'] .' '. $w['liczba_pokoi'] .' '. $w['max_cena' ].'
                                     <div class="btn-group" role="group" style="font-size: 8px;"><button class="btn btn-primary" type="button" style="font-size: 8px;">Edytuj</button><button class="btn btn-primary" type="button" style="font-size: 8px;">Usuń</button></div>
                                 </li>';
                                 }
                                 foreach ($wymagania_specjalne as $ws){
                                     if($ws->status_wymagania){
-                                        echo '<li> '. $w->nazwa_wymagania .'
+                                        echo '<li> '. $w['nazwa_wymagania'] .'
                                     <div class="btn-group" role="group" style="font-size: 8px;"><button class="btn btn-primary" type="button" style="font-size: 8px;">Edytuj</button><button class="btn btn-primary" type="button" style="font-size: 8px;">Usuń</button></div>
                                     </li>';
                                     }
