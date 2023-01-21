@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'Templates/header.php'; ?>
 <?php session_start(); ?>
 <main class="page projects-page">
     <section class="portfolio-block projects-cards">
