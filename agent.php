@@ -4,9 +4,11 @@ $user_id = $_SESSION['user_id'];
 $sql = "SELECT * FROM agents_clients WHERE agents = '$user_id'";
 $agents_clients = $pdo->query($sql);
 $agents_clients = $agents_clients->fetchAll();
+$clients = [];
 foreach ($agents_clients as $agents_client){
-    $clients = $pdo->query("SELECT * FROM users WHERE user_id = '$agents_client[clients]'");
-    $clients = $clients->fetchAll();
+    $client = $pdo->query("SELECT * FROM users WHERE user_id = '$agents_client[clients]'");
+    $client = $clients->fetchAll();
+    $clients [] = $client;
 }
 ?>
 <main class="page projects-page">
