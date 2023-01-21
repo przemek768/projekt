@@ -17,9 +17,10 @@
                     <div class="form-group"><label for="subject">Rodzaj nieruchomości</label><select class="form-control" id="subject"><option value="gruntowe">gruntowe</option><option value="lokalowe">lokalowe</option><option value="budynkowe">budynkowe</option></select></div>
                     <div
                         class="form-group"><label>Lokalizacja</label><input name="localization" id="localization" class="form-control" type="text"></div>
-                    <div class="form-group"><label for="email">Rozmiar<br></label><input class="form-control" type="number" name="size" min="5" max="5000" step="1"></div>
-                    <div class="form-group"><label for="email">Liczba pokoi<br></label><input class="form-control" type="number" name="size" min="1" max="999" step="1"></div>
-                    <div class="form-group"><label for="email">Cena<br></label><input class="form-control" type="number" name="size" min="1" max="9999999999" step="1000"></div>
+                    <div class="form-group"><label for="email">Rozmiar<br></label><input class="form-control" name="min-size" id="size" type="number" name="size" min="5" max="5000" step="1"></div>
+                    <div class="form-group"><label for="email">Liczba pokoi<br></label><input class="form-control" name="min-room-number" id="room-number" type="number" name="size" min="1" max="999" step="1"></div>
+                    <div class="form-group"><label for="email">Cena<br></label><input class="form-control" type="number" name="size" name="price" id="max-price"></div>
+                    <input type="hidden" name="user_id" id="user_id" value="<?php echo $user_id ?>">
                     <div class="form-group"><label for="email">Opis<br></label><textarea class="form-control"></textarea><button class="btn btn-primary btn-block btn-lg text-center d-xl-flex justify-content-xl-center" type="submit">Zatwierdź wymagania</button></div>
                 </form>
             </div>
