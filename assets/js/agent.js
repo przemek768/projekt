@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 });
 $(document).ready(function(){
-    let client_id = $(this).val();
+    let client_id = $('.clients').val();
     console.log(client_id);
     $.ajax({
         url: 'sql/show_offers.php',
