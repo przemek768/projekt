@@ -9,6 +9,9 @@ $offers = $offers->fetchAll();
 $check = [];
 $check_client_offers = $pdo->query("SELECT * FROM clients_offers WHERE client_id = '$client_id'");
 $check_client_offers = $check_client_offers->fetchAll();
+if($check_client_offers == null){
+    $check_client_offers = array(0);
+}
 foreach ($wymagania as $wymaganie) {
     foreach ($offers as $offer) {
         foreach ($check_client_offers as $cco){
