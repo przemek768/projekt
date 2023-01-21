@@ -2,6 +2,7 @@
 <?php session_start(); ?>
 <?php
 $cliet_offers = $pdo->query("SELECT * FROM clients_offers INNER JOIN offers ON clients_offers.offer_id = offers.offer_id WHERE clients_offers.client_id = '$user_id'");
+$client_offers_accepted = $pdo->query("SELECT * FROM clients_offers WHEREclient_id = '$user_id' AND clients_offers.status = 1");
 ?>>
 <main class="page projects-page">
     <section class="portfolio-block projects-cards">
@@ -15,15 +16,22 @@ $cliet_offers = $pdo->query("SELECT * FROM clients_offers INNER JOIN offers ON c
 <div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-xl-6">
-                <h1>Wymagania</h1>
-                <?php
-                $wymagania = $pdo->query("SELECT * FROM requirements WHERE user_id = '$user_id'");
-                $wymagania = $wymagania->fetchAll();
-                $wymagania_count = count($wymagania);
+            <?php
+            if($client_offers_accepted){
+                echo '<div class="col">
+                        <h1>Oferta została zakceptowana oczekuje na finalizację, wkrótce skontatkuje się z tobą nasz agent</h1>
 
-                if($wymagania_count > 0){
-                    echo'
+</div>';
+            }else{ ?>
+                <div class="col-md-12 col-xl-6">
+                    <h1>Wymagania</h1>
+                    <?php
+                    $wymagania = $pdo->query("SELECT * FROM requirements WHERE user_id = '$user_id'");
+                    $wymagania = $wymagania->fetchAll();
+                    $wymagania_count = count($wymagania);
+
+                    if($wymagania_count > 0){
+                        echo'
                         <form method="post" action="sql/wymagania_update.php">
                     <div class="form-group"><label for="subject">Rodzaj nieruchomości</label><select class="form-control" name="subject" id="subject"><option value="gruntowe">gruntowe</option><option value="lokalowe">lokalowe</option><option value="budynkowe">budynkowe</option></select></div>
                     <div
@@ -35,8 +43,8 @@ $cliet_offers = $pdo->query("SELECT * FROM clients_offers INNER JOIN offers ON c
                     <div class="col d-xl-flex justify-content-xl-center align-items-xl-end"><button class="btn btn-primary btn-block btn-lg text-center d-xl-flex justify-content-xl-center" type="submit">Zaktualizuj wmagania</button></div>
                 </form>
                     ';
-                }else{
-                    echo'
+                    }else{
+                        echo'
                     <form method="post" action="sql/wymagania.php">
                     <div class="form-group"><label for="subject">Rodzaj nieruchomości</label><select class="form-control" name="subject" id="subject"><option value="gruntowe">gruntowe</option><option value="lokalowe">lokalowe</option><option value="budynkowe">budynkowe</option></select></div>
                     <div
@@ -47,17 +55,17 @@ $cliet_offers = $pdo->query("SELECT * FROM clients_offers INNER JOIN offers ON c
                     <input type="hidden" name="user_id" value="'.$user_id.'">
                     <div class="col d-xl-flex justify-content-xl-center align-items-xl-end"><button class="btn btn-primary btn-block btn-lg text-center d-xl-flex justify-content-xl-center" type="submit">Zatwierdź wymagania</button></div>
                 </form>';
-                }
-                ?>
-            </div>
-            <div class="col-md-12 col-xl-6">
-                <h1>Oferty</h1>
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <?php foreach ($cliet_offers as $offert){
-                            echo '
+                    }
+                    ?>
+                </div>
+                <div class="col-md-12 col-xl-6">
+                    <h1>Oferty</h1>
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <?php foreach ($cliet_offers as $offert){
+                                echo '
                             <div class="swiper-slide">
                             <form action="sql/take_offer.php" method="post">
                                 <h2 class="text-center">'. $offert['subject'] .' ' . $offert['localization'] .'</h2>
@@ -72,22 +80,24 @@ $cliet_offers = $pdo->query("SELECT * FROM clients_offers INNER JOIN offers ON c
                                 </form>
                         </div>
                             ';
-                        }
+                            }
 
-                        ?>
-                        ...
+                            ?>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
                     </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
                 </div>
-            </div>
+           <?php }
+            ?>
         </div>
     </div>
 </div>
