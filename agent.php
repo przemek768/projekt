@@ -47,7 +47,7 @@ foreach ($agents_clients as $agents_client){
     </div>
 </div>
 <script>
-    $ = jQuery.noConflict();
+    $ = jQuery;
     $(document).ready(function(){
        $('select.client').change(function(){
            var client_id = $(this).val();
