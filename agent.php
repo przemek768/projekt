@@ -8,7 +8,7 @@ $clients = [];
 foreach ($agents_clients as $agents_client){
     $client = $pdo->query("SELECT * FROM users WHERE user_id = '$agents_client[clients]'");
     $client = $client->fetchAll();
-    $clients = array_push($clients, $client);
+    $clients [] = $client;
 }
 ?>
 <main class="page projects-page">
