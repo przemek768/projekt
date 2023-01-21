@@ -59,7 +59,7 @@ $cliet_offers = $pdo->query("SELECT * FROM clients_offers INNER JOIN offers ON c
                         <?php foreach ($cliet_offers as $offert){
                             echo '
                             <div class="swiper-slide">
-                            <form action="">
+                            <form action="sql/take_offer.php" method="post">
                                 <h2 class="text-center">'. $offert['subject'] .' ' . $offert['localization'] .'</h2>
                                 <p class="text-center">Rodzaj nieruchomości: '. $offert['subject'] .'</p>
                                 <p class="text-center">Lokalizacja: ' . $offert['localization'] .'</p>
