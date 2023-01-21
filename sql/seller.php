@@ -1,5 +1,5 @@
 <?php
-include 'DataBaseConnection.php';
+include '../DataBaseConnection.php';
 $sub = $_POST['subject'];
 $min_size = $_POST['min-size'];
 $min_room_number = $_POST['min-room-number'];
