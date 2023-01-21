@@ -16,7 +16,6 @@ foreach ($agents_clients as $agents_client){
         <div class="container">
             <div class="heading">
                 <h2>PANEL AGENTA</h2>
-                <?php var_dump($clients); ?>
             </div>
         </div>
     </section>
@@ -48,6 +47,7 @@ foreach ($agents_clients as $agents_client){
     </div>
 </div>
 <script>
+    $ = jQuery.noConflict();
     $(document).ready(function(){
        $('select.client').change(function(){
            var client_id = $(this).val();
