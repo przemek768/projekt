@@ -16,7 +16,7 @@
                 <form>
                     <div class="form-group"><label for="subject">Rodzaj nieruchomości</label><select class="form-control" id="subject"><option value="gruntowe">gruntowe</option><option value="lokalowe">lokalowe</option><option value="budynkowe">budynkowe</option></select></div>
                     <div
-                        class="form-group"><label>Lokalizacja</label><input class="form-control" type="text"></div>
+                        class="form-group"><label>Lokalizacja</label><input name="localization" id="localization" class="form-control" type="text"></div>
                     <div class="form-group"><label for="email">Rozmiar<br></label><input class="form-control" type="number" name="size" min="5" max="5000" step="1"></div>
                     <div class="form-group"><label for="email">Liczba pokoi<br></label><input class="form-control" type="number" name="size" min="1" max="999" step="1"></div>
                     <div class="form-group"><label for="email">Cena<br></label><input class="form-control" type="number" name="size" min="1" max="9999999999" step="1000"></div>

@@ -1,5 +1,6 @@
 <?php include 'DataBaseConnection.php'; ?>
 <?php
+session_start();
 if($_SESSION['user']){
     $user_id = $_SESSION['user_id'];
     $username = $_SESSION['name'];
