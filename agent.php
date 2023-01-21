@@ -60,20 +60,20 @@ foreach ($agents_clients as $agents_client){
                }
            });
        });
-    });
-    $(document).on('click', '.btn-primary', function(){
-        var clients = $('#clients').val();
-        var agents = $('#agents').val();
-        fd = new FormData();
-        fd.append('clients', clients);
-        fd.append('agents', agents);
-        $.ajax({
-            url: 'sql/add_offer.php',
-            type: 'POST',
-            data: fd,
-            success: function(data){
-                alert(data);
-            }
+        $(document).on('click', '.btn-primary', function(){
+            var clients = $('#clients').val();
+            var agents = $('#agents').val();
+            fd = new FormData();
+            fd.append('clients', clients);
+            fd.append('agents', agents);
+            $.ajax({
+                url: 'sql/add_offer.php',
+                type: 'POST',
+                data: fd,
+                success: function(data){
+                    alert(data);
+                }
+            });
         });
     });
 </script>
