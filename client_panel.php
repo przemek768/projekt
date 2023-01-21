@@ -2,7 +2,7 @@
 <?php session_start(); ?>
 <?php
 $cliet_offers = $pdo->query("SELECT * FROM clients_offers INNER JOIN offers ON clients_offers.offer_id = offers.offer_id WHERE clients_offers.client_id = '$user_id'");
-$client_offers_accepted = $pdo->query("SELECT * FROM clients_offers WHEREclient_id = '$user_id' AND clients_offers.status = 1");
+$client_offers_accepted = $pdo->query("SELECT * FROM clients_offers WHERE client_id = '$user_id' AND clients_offers.status = 1");
 ?>>
 <main class="page projects-page">
     <section class="portfolio-block projects-cards">
