@@ -3,6 +3,7 @@
 <?php
 $cliet_offers = $pdo->query("SELECT * FROM clients_offers INNER JOIN offers ON clients_offers.offer_id = offers.offer_id WHERE clients_offers.client_id = '$user_id'");
 $client_offers_accepted = $pdo->query("SELECT * FROM clients_offers WHERE client_id = '$user_id' AND clients_offers.status = 1");
+$client_offers_accepted_count = $client_offers_accepted->rowCount();
 ?>>
 <main class="page projects-page">
     <section class="portfolio-block projects-cards">
@@ -17,7 +18,7 @@ $client_offers_accepted = $pdo->query("SELECT * FROM clients_offers WHERE client
     <div class="container">
         <div class="row">
             <?php
-            if($client_offers_accepted){
+            if($client_offers_accepted_count > 0){
                 echo '<div class="col">
                         <h1>Oferta została zakceptowana oczekuje na finalizację, wkrótce skontatkuje się z tobą nasz agent</h1>
 
