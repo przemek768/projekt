@@ -34,7 +34,7 @@ $clients = $clients->fetchAll();
                             </select></div>
                         <div class="col">
                             <h1>Klienci bez agenta</h1><select class="form-control" id="clients" name="clients"><optgroup label="This is a group">
-                                    <?foreach ($clients as $client){
+                                    <?php foreach ($clients as $client){
                                         $check = false;
                                         foreach ($check_exists_clients as $check_exists_client){
                                             if($check_exists_client['user_id'] == $client['user_id']){
