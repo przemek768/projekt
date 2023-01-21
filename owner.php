@@ -45,7 +45,6 @@ $clients = $clients->fetchAll();
                                             echo '<option value="'. $client['user_id'] .'">'. $client['name'] .' '. $client['surname'] .'</option>';
                                         }
                                     }?>
-                                    <option value="12" selected="">This is item 1</option>
                                 </optgroup>
                             </select></div>
                     </div>
