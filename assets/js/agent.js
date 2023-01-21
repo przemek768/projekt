@@ -1,10 +1,11 @@
 $(document).ready(function(){
     $('select.client').change(function(){
-        var client_id = $(this).val();
+        let client_id = $(this).val();
+        console.log(client_id);
         $.ajax({
             url: 'sql/show_offers.php',
             type: 'POST',
-            data: {client_id: client_id},
+            data: {client_id_id: client_id},
             success: function(data){
                 $('.change').html();
                 $('.change').html(data);
