@@ -11,7 +11,7 @@ $clients = $clients->fetchAll();
     <section class="portfolio-block projects-cards">
         <div class="container">
             <div class="heading">
-                <h2>PANEL KUPUJĄCEGO</h2>
+                <h2>PANEL Kierownika</h2>
             </div>
         </div>
     </section>
