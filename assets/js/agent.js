@@ -5,7 +5,7 @@ $(document).ready(function(){
         $.ajax({
             url: 'sql/show_offers.php',
             type: 'POST',
-            data: {client_id_id: client_id},
+            data: {client_id: client_id},
             success: function(data){
                 $('.change').html();
                 $('.change').html(data);
