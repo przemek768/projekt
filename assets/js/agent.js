@@ -1,7 +1,6 @@
 $(document).ready(function(){
     $('select.client').change(function(){
         var client_id = $(this).val();
-        console.log(client_id);
         $.ajax({
             url: 'sql/show_offers.php',
             type: 'POST',
