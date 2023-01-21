@@ -14,7 +14,7 @@ $(document).ready(function(){
 });
 $(document).on('click', '.btn-primary', function(){
     var clients = $('#clients').val();
-    var agents = $('#agents').val();
+    var agents = $('#offers').val();
     fd = new FormData();
     $.ajax({
         url: 'sql/add_offer.php',

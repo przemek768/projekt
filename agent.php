@@ -36,7 +36,6 @@ foreach ($agents_clients as $agents_client){
                         <div class="col">
                             <h1>Znalezione oferty</h1><select class="form-control" id="offers" name="offers">
                                 <optgroup class="change" label="This is a group">
-                                    <option value="12" selected="">This is item 1</option>
                                 </optgroup>
                             </select></div>
                     </div>
