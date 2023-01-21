@@ -27,14 +27,14 @@ foreach ($agents_clients as $agents_client){
                 <form>
                     <div class="form-row">
                         <div class="col">
-                            <h1>Przypisani klienci</h1><select class="form-control client" name="clients"><optgroup label="This is a group">
+                            <h1>Przypisani klienci</h1><select class="form-control client" id="clients" name="clients"><optgroup label="This is a group">
                                     <?php foreach ($clients as $client){
                                         echo '<option value="'. $client[0]['user_id'] .'">'. $client[0]['name'] .' '. $client[0]['surname'] .'</option>';
                                     }?>
                                 </optgroup>
                             </select></div>
                         <div class="col">
-                            <h1>Znalezione oferty</h1><select class="form-control" name="offers">
+                            <h1>Znalezione oferty</h1><select class="form-control" id="offers" name="offers">
                                 <optgroup class="change" label="This is a group">
                                     <option value="12" selected="">This is item 1</option>
                                 </optgroup>
