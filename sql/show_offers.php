@@ -17,4 +17,4 @@ $data = [];
 foreach ($check as $c){
     $data[] = '<option value="'. $c['offer_id'] .'">'. $c['localization'] . ' ' . $c['subject'] '</option>';
 }
-echo $data;
+return $data;
