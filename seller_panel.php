@@ -2,6 +2,7 @@
 <?php session_start(); ?>
 <?php
 $offerts = $pdo->query("SELECT * FROM offers WHERE user_id = '$user_id'");
+$offerts = $offerts->fetchAll();
 ?>
 <main class="page projects-page">
     <section class="portfolio-block projects-cards">
@@ -34,18 +35,22 @@ $offerts = $pdo->query("SELECT * FROM offers WHERE user_id = '$user_id'");
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide">
+                        <?php foreach ($offerts as $offert){
+                            echo '
+                            <div class="swiper-slide">
                             <form>
-                                <h2 class="text-center">Tytuł oferty</h2>
-                                <p class="text-center">Rodzaj nieruchomości: lokalowa</p>
-                                <p class="text-center">Lokalizacja: adres</p>
-                                <p class="text-center">Rozmiar: 20m2</p>
-                                <p class="text-center">Liczba pokoi: 10</p>
-                                <p class="text-center">Cena: 400000 zł</p>
-                                <p class="text-center">Opis: Fajne mieszkanie</p><button class="btn btn-primary text-center d-xl-flex" type="button" style="margin-left: auto;margin-right: auto;">Pokaż więcej</button></form>
+                                <h2 class="text-center">'. $offert['subject'] .' ' . $offert['localization'] .'</h2>
+                                <p class="text-center">Rodzaj nieruchomości: '. $offert['subject'] .'</p>
+                                <p class="text-center">Lokalizacja: ' . $offert['localization'] .'</p>
+                                <p class="text-center">Rozmiar: ' . $offert['min_size'] .'</p>
+                                <p class="text-center">Liczba pokoi: ' . $offert['min_room_number'] .'</p>
+                                <p class="text-center">Cena: ' . $offert['max_price'] .' zł</p>
+                                <p class="text-center">Opis: ' . $offert['opis'] .'</p></form>
                         </div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
+                            ';
+                        }
+
+                        ?>
                         ...
                     </div>
                     <!-- If we need pagination -->
