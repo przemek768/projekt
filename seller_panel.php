@@ -26,7 +26,7 @@ $offerts = $offerts->fetchAll();
                     <div class="form-group"><label for="email">Liczba pokoi<br></label><input class="form-control" name="min-room-number" id="room-number" type="number" name="size" min="1" max="999" step="1"></div>
                     <div class="form-group"><label for="email">Cena<br></label><input class="form-control" type="number" name="max-price" id="max-price"></div>
                     <input type="hidden" name="user_id" id="user_id" value="<?php echo $user_id ?>">
-                    <div class="form-group"><label for="email">Opis<br></label><textarea name="opis" id="opis" class="form-control"></textarea><button class="btn btn-primary btn-block btn-lg text-center d-xl-flex justify-content-xl-center" type="submit">Zatwierdź wymagania</button></div>
+                    <div class="form-group"><label for="email">Opis<br></label><textarea name="opis" id="opis" class="form-control"></textarea><button class="btn btn-primary btn-block btn-lg text-center d-xl-flex justify-content-xl-center" type="submit">Zatwierdź ofertę</button></div>
                 </form>
             </div>
             <div class="col">
