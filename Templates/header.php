@@ -43,7 +43,7 @@ if($_SESSION['user']){
                     ';
                 }elseif ($role == 2){
                     echo'
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="seller.php">Panel agenta</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="agent.php">Panel agenta</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link">Cześć, '. $username .'</a></li>
                     <li class="nav-item" role="presentation"><form method="post" action="sql/logout.php"><button class="btn button" type="submit" class="nav-link">Wyloguj</button></form></li>
                     ';
