@@ -13,10 +13,13 @@
         <div class="row">
             <div class="col-md-12 col-xl-6">
                 <h1>Wymagania</h1>
+                <?php
+                $wymagania = $pdo->query("SELECT * FROM requirements WHERE user_id = '$user_id'");
+                ?>
                 <form method="post" action="sql/wymagania.php">
                     <div class="form-group"><label for="subject">Rodzaj nieruchomości</label><select class="form-control" name="subject" id="subject"><option value="gruntowe">gruntowe</option><option value="lokalowe">lokalowe</option><option value="budynkowe">budynkowe</option></select></div>
                     <div
-                        class="form-group"><label>Lokalizacja</label><input class="form-control" type="text"></div>
+                        class="form-group"><label>Lokalizacja</label><input name="localization" id="localization" class="form-control" type="text"></div>
                     <div class="form-group"><label for="email">Minimalny rozmiar<br></label><input id="min-size" name="min-size" class="form-control" type="number" name="size" min="5" max="5000" step="1"></div>
                     <div class="form-group"><label for="email">Minimalna liczba pokoi<br></label><input id="min-room-number" name="min-room-number" class="form-control" type="number" name="size" min="1" max="999" step="1"></div>
                     <div class="form-group"><label for="email">Maksymalna cena<br></label><input name="max-price" id="max-price" class="form-control" type="number" name="size" min="1" max="9999999999" step="1000"></div>
