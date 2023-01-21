@@ -21,7 +21,7 @@ $(document).on('click', '.btn-primary', function(){
         type: 'POST',
         data: {clients: clients, offers: offers},
         success: function(data){
-            alert(data);
+            location.reload();
         }
     });
 });
