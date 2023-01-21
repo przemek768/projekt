@@ -15,6 +15,6 @@ foreach ($wymagania as $wymaganie) {
 }
 $data = [];
 foreach ($check as $c){
-    $data[] = '<option value="'. $c['offer_id'] .'">'. $c['localization'] . ' ' . $c['subject'] '</option>';
+    $data[] = '<option value="'. $c['offer_id'] .'">'. $c['subject'] . ' ' .$c['localization'] .'</option>';
 }
 return $data;
