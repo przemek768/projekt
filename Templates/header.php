@@ -36,19 +36,19 @@ if($_SESSION['user']){
                 <?php
                 if($role == 1){
                     echo'
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="panel_kupujacy.html">Panel kupującego</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="panel_sprzedajacy.html">Panel sprzedającego</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="hire-me.html">Cześć, '. $username .'</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="client_panel.php">Panel kupującego</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="seller_panel.php">Panel sprzedającego</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link">Cześć, '. $username .'</a></li>
                     ';
                 }elseif ($role == 2){
                     echo'
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="panel_sprzedajacy.html">Panel agenta</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="hire-me.html">Cześć, '. $username .'</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="seller.php">Panel agenta</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link">Cześć, '. $username .'</a></li>
                     ';
                 }elseif($role == 3){
                     echo '
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="panel_sprzedajacy.html">Panel kierownika</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="hire-me.html">Cześć, '. $username .'</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="owner.php">Panel kierownika</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link">Cześć, '. $username .'</a></li>
                     ';
                 }else{
                     echo'
