@@ -2,7 +2,7 @@
 <?php
 $agents = $pdo->query("SELECT * FROM users WHERE role = '2'");
 $agents = $agents->fetchAll();
-$check_exists_clients = $pdo->query("SELECT * FROM przypisania");
+$check_exists_clients = $pdo->query("SELECT * FROM agents_clients");
 $check_exists_clients = $check_exists_clients->fetchAll();
 $clients = $pdo->query("SELECT * FROM users WHERE role = '1'");
 $clients = $clients->fetchAll();
