@@ -1,5 +1,8 @@
 <?php include 'Templates/header.php'; ?>
 <?php session_start(); ?>
+<?php
+$offerts = $pdo->query("SELECT * FROM offers WHERE user_id = '$user_id'");
+?>
 <main class="page projects-page">
     <section class="portfolio-block projects-cards">
         <div class="container">
@@ -27,14 +30,34 @@
             </div>
             <div class="col">
                 <h1>Twoje oferty</h1>
-                <form>
-                    <h2 class="text-center">Tytuł oferty</h2>
-                    <p class="text-center">Rodzaj nieruchomości: lokalowa</p>
-                    <p class="text-center">Lokalizacja: adres</p>
-                    <p class="text-center">Rozmiar: 20m2</p>
-                    <p class="text-center">Liczba pokoi: 10</p>
-                    <p class="text-center">Cena: 400000 zł</p>
-                    <p class="text-center">Opis: Fajne mieszkanie</p><button class="btn btn-primary text-center d-xl-flex" type="button" style="margin-left: auto;margin-right: auto;">Pokaż więcej</button></form>
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <form>
+                                <h2 class="text-center">Tytuł oferty</h2>
+                                <p class="text-center">Rodzaj nieruchomości: lokalowa</p>
+                                <p class="text-center">Lokalizacja: adres</p>
+                                <p class="text-center">Rozmiar: 20m2</p>
+                                <p class="text-center">Liczba pokoi: 10</p>
+                                <p class="text-center">Cena: 400000 zł</p>
+                                <p class="text-center">Opis: Fajne mieszkanie</p><button class="btn btn-primary text-center d-xl-flex" type="button" style="margin-left: auto;margin-right: auto;">Pokaż więcej</button></form>
+                        </div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
             </div>
         </div>
     </div>
