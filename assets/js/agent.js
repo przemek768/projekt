@@ -16,12 +16,10 @@ $(document).on('click', '.btn-primary', function(){
     var clients = $('#clients').val();
     var agents = $('#agents').val();
     fd = new FormData();
-    fd.append('clients', clients);
-    fd.append('agents', agents);
     $.ajax({
         url: 'sql/add_offer.php',
         type: 'POST',
-        data: fd,
+        data: {clients: clients, agents: agents},
         success: function(data){
             alert(data);
         }
