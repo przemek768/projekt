@@ -68,7 +68,7 @@ $cliet_offers = $pdo->query("SELECT * FROM clients_offers INNER JOIN offers ON c
                                 <p class="text-center">Cena: ' . $offert['max_price'] .' zł</p>
                                 <p class="text-center">Opis: ' . $offert['opis'] .'</p>
                                 <input type="hidden" id="id_clients_offers" name="id_clients_offers" value="'. $offert['id_clients_offers'] .'">
-                                <p><button class="btn btn-primary btn-block btn-lg text-center d-xl-flex justify-content-xl-center" type="submit"></button></p>
+                                <div class="col d-xl-flex justify-content-xl-center align-items-xl-end"><button class="btn btn-primary btn-block btn-lg text-center d-xl-flex justify-content-xl-center" type="submit">Przyjmij oferte</button></div>
                                 </form>
                         </div>
                             ';
