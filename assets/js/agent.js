@@ -16,8 +16,6 @@ $(document).ready(function(){
 $(document).on('click', '.btn-primary', function(){
     var clients = $('#clients').val();
     var offers = $('#offers').val();
-    console.log(clients);
-    console.log(agents);
     $.ajax({
         url: 'sql/add_offer.php',
         type: 'POST',
