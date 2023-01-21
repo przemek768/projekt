@@ -1,5 +1,4 @@
-<?php include('Templates/header.php') ?>
-<main class="page lanidng-page"></main>
+<?php include 'Templates/header.php'; ?>
 <div class="login-clean">
     <form method="post" action="sql/login.php">
         <h2 class="sr-only">Login Form</h2>
@@ -9,4 +8,4 @@
         <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: rgb(71,119,244);">Log In</button></div>
     </form>
 </div>
-<?php include('Templates/footer.php') ?>
+<?php include 'Templates/footer.php'; ?>

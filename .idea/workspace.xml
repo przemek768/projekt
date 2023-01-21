@@ -3,7 +3,44 @@
   <component name="ChangeListManager">
     <list default="true" id="ec3e650e-6c5e-4064-8f42-fd2e5cf876be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataBaseConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/DataBaseConnection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/Article-List.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/Login-Form-Clean.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/NavBar-Notifications-Panel-1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/NavBar-Notifications-Panel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/ionicons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/ionicons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/ionicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/ionicons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/ionicons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/Black Monoline Real Estate Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/avatars/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/building.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/desk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/loft.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/nature/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/nature/image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/nature/image3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/nature/image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/nature/image5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/nature/image6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tech/image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/tech/image6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/theme.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client_panel.php" beforeDir="false" afterPath="$PROJECT_DIR$/client_panel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/sql/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/sql/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/wymagania.php" beforeDir="false" afterPath="$PROJECT_DIR$/sql/wymagania.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wymagania.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +112,10 @@
       <workItem from="1673891482099" duration="1677000" />
       <workItem from="1673976414721" duration="5617000" />
       <workItem from="1674032446481" duration="446000" />
-      <workItem from="1674158898102" duration="3416000" />
+      <workItem from="1674158898102" duration="4017000" />
+      <workItem from="1674199260760" duration="13000" />
+      <workItem from="1674245762232" duration="5729000" />
+      <workItem from="1674292404483" duration="643000" />
     </task>
     <servers />
   </component>

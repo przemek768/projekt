@@ -1,4 +1,4 @@
-<?php include ('Templates/header.php'); ?>
+<?php include 'Templates/header.php'; ?>
 <main class="page contact-page">
     <section class="portfolio-block contact">
         <div class="container">
@@ -19,5 +19,4 @@
         </div>
     </section>
 </main>
-<?php include ('Templates/footer.php'); ?>
-
+<?php include 'Templates/footer.php'; ?>

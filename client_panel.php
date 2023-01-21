@@ -1,104 +1,40 @@
-<?php include ('Templates/header.php'); ?>
-<?php include ('DataBaseConnection.php'); ?>
-<?php
-$user_id = $_SESSION['user_id'];
-$wymagania = $pdo->query("SELECT * FROM wymagania WHERE user_id = '$user_id'");
-$wymagania = $wymagania->fetchAll();
-foreach ($wymagania as $wy){
-    $wymagania_id = $wy['id_wymagania'];
-}
-$wymagania_specjalne = $pdo->query("SELECT * FROM wymagania_specjalne WHERE id_wymagania = '$wymagania_id'");
-$wymagania_specjalne = $wymagania_specjalne->fetchAll();
-?>
+<?php include 'Templates/header.php'; ?>
 <main class="page projects-page">
     <section class="portfolio-block projects-cards">
         <div class="container">
             <div class="heading">
                 <h2>PANEL KUPUJĄCEGO</h2>
             </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0"><a href="#"></a>
-                        <div class="card-body">
-                            <h6><a href="#">DODAJ WYMAGANIA</a></h6>
-                            <p class="text-muted card-text">Zakładka dodawania wymagań</p>
-                            <?php
-                            if($wymagania){
-                                echo '<a class="btn btn-primary" href="/wymagania.php">Edytuj</a>';
-                            }else{
-                                echo '<a class="btn btn-primary" href="/wymagania.php">Dodaj</a>';
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0"><a href="#"></a>
-                        <div class="card-body">
-                            <h6><a href="#">DOPASOWANE OFERTY</a></h6>
-                            <p class="text-muted card-text">Zakładka dopasowanych ofert</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0"><a href="#"></a>
-                        <div class="card-body">
-                            <h6><a href="#"></a><a href="#">FINALIZACJA OFERT</a></h6>
-                            <p class="text-muted card-text">Zakładka finalizacji</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0"><a href="#"></a>
-                        <div class="card-body">
-                            <h6><a href="#">OBECNE WYMAGANIA</a></h6>
-                            <ul>
-                                <?php
-                                if($wymagania){
-                                    foreach ($wymagania as $w){
-                                        echo '<li> '. $w['rodzaj_nieruchomosci'] .' '. $w['lokalizacja'] .' '. $w['min_rozmiar'] .' '. $w['liczba_pokoi'] .' '. $w['max_cena' ].'
-                                </li>';
-                                    }
-                                    foreach ($wymagania_specjalne as $ws){
-                                        if($ws['status_wymagania'] == 1){
-                                            echo '<li> '. $ws['nazwa_wymagania'] .'
-                                    </li>';
-                                        }
-                                    }
-                                }else{
-                                    echo '<li>Brak wymagań</li>';
-                                }
-                                ?>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0"><a href="#"></a>
-                        <div class="card-body">
-                            <h6><a href="#">TWÓJ AGENT</a></h6>
-                            <p class="text-muted card-text"></p>
-                            <p class="text-muted card-text">Imie nazwisko: Mariusz Bąk</p>
-                            <p class="text-muted card-text">Identyfikator: 140132</p>
-                            <p class="text-muted card-text">Numer telefonu: 632 432 562</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0"><a href="#"></a>
-                        <div class="card-body">
-                            <h6><a href="#">KONTAKT Z CENTRALĄ</a></h6>
-                            <p class="text-muted card-text">Nazwa firmy: System Zarządzania Biurem Nieruchomości</p>
-                            <p class="text-muted card-text">Adres: Akacjowa 14, 10-041 Olsztyn</p>
-                            <p class="text-muted card-text">NIP: 0041023121</p>
-                            <p class="text-muted card-text">Numer telefonu:<br>593 023 123</p>
-                            <p class="text-muted card-text">Email:&nbsp;<br>olsztyn@szbn.pl</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 </main>
-<?php include ('Templates/footer.php'); ?>
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xl-6">
+                <h1>Wymagania</h1>
+                <form method="post" action="sql/wymagania.php">
+                    <div class="form-group"><label for="subject">Rodzaj nieruchomości</label><select class="form-control" name="subject" id="subject"><option value="gruntowe">gruntowe</option><option value="lokalowe">lokalowe</option><option value="budynkowe">budynkowe</option></select></div>
+                    <div
+                        class="form-group"><label>Lokalizacja</label><input class="form-control" type="text"></div>
+                    <div class="form-group"><label for="email">Minimalny rozmiar<br></label><input id="min-size" name="min-size" class="form-control" type="number" name="size" min="5" max="5000" step="1"></div>
+                    <div class="form-group"><label for="email">Minimalna liczba pokoi<br></label><input id="min-room-number" name="min-room-number" class="form-control" type="number" name="size" min="1" max="999" step="1"></div>
+                    <div class="form-group"><label for="email">Maksymalna cena<br></label><input name="max-price" id="max-price" class="form-control" type="number" name="size" min="1" max="9999999999" step="1000"></div>
+                    <div class="col d-xl-flex justify-content-xl-center align-items-xl-end"><button class="btn btn-primary btn-block btn-lg text-center d-xl-flex justify-content-xl-center" type="submit">Zatwierdź wymagania</button></div>
+                </form>
+            </div>
+            <div class="col-md-12 col-xl-6">
+                <h1>Oferty</h1>
+                <form>
+                    <h2 class="text-center">Tytuł oferty</h2>
+                    <p class="text-center">Rodzaj nieruchomości: lokalowa</p>
+                    <p class="text-center">Lokalizacja: adres</p>
+                    <p class="text-center">Rozmiar: 20m2</p>
+                    <p class="text-center">Liczba pokoi: 10</p>
+                    <p class="text-center">Cena: 400000 zł</p>
+                    <p class="text-center">Opis: Fajne mieszkanie</p><button class="btn btn-primary text-center d-xl-flex" type="button" style="margin-left: auto;margin-right: auto;">Pokaż więcej</button></form>
+            </div>
+        </div>
+    </div>
+</div>
+<?php include 'Templates/footer.php'; ?>
