@@ -1,6 +1,6 @@
 <?php
 include '../DataBaseConnection.php';
-$client_id = $_POST['clients'];
+$client_id = $_POST['client_id'];
 $wymagania = $pdo->query("SELECT * FROM requirements WHERE user_id = '$client_id'");
 $wymagania = $wymagania->fetchAll();
 $offers = $pdo->query("SELECT * FROM offers");
