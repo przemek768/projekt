@@ -24,5 +24,8 @@ foreach ($check as $c){
     $data[] = '<option value="'. $c['offer_id'] .'">'. $c['subject'] . ' ' .$c['localization'] .'</option>';
 }
 foreach ($data as $d){
+    if($d != null){
+        echo $d;
+    }else
     echo $d;
 }
